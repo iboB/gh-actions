@@ -13,7 +13,7 @@ jobs:
       run: |
         mkdir build
         cd build
-        cmake .. -G "Unix makefiles"
+        cmake .. -G "Unix Makefiles"
     - name: make
       run: make -j
     - name: test
