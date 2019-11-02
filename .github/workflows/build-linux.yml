@@ -13,10 +13,10 @@ jobs:
       run: |
         mkdir build
         cd build
-        cmake .. -G "Unix Makefiles"
+        cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug
     - name: make
       working-directory: build
       run: make -j
     - name: test
       working-directory: build
-      run: ctest --output-on-failure
+      run: ctest -C Debug --output-on-failure
